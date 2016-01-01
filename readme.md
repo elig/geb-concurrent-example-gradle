@@ -1,4 +1,9 @@
-Based on the geb-example-gradle here is an example for concurrent testing with Browserstack.
-To run just execute ./gradlew clean allBrowserStackTests --parallel
+##Steps to run
 
-It will parallel run all tests in selected browsers. 
+1. Clone Repo: `git clone https://github.com/UmangSardesai/geb-concurrent-example-gradle.git`
+
+2. Add your username and automate-key to the `./build.gradle` and `./src/test/resources/GebConfig.groovy`.
+
+3. Execute tests sequentially: `./gradlew clean allBrowserStackTests`
+
+4. Execute tests in parallel: `./gradlew clean allBrowserStackTests --parallel`

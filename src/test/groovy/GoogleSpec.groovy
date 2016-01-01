@@ -4,24 +4,24 @@ import geb.spock.*
 
 class GoogleSpec extends GebReportingSpec {
 
-    def "the first link should be wikipedia"() {
+    def "Search BrowserStack on Google"() {
         when:
         to GoogleHomePage
 
         and:
-        q = "wikipedia"
+        q = "BrowserStack"
 
         then:
-        at GoogleResultsPage
+        waitFor { at GoogleResultsPage }
 
-        and:
-        firstResultLink.text() == "Wikipedia"
+        //and:
+        //firstResultLink.text() == "Wikipedia"
 
-        when:
-        firstResultLink.click()
+        //when:
+        //firstResultLink.click()
 
-        then:
-        waitFor { at WikipediaPage }
+        //then:
+        //waitFor { at WikipediaPage }
     }
 
 }
